@@ -2,8 +2,8 @@ name: Super-Linter
 
 # Run this workflow a new commit pushed to /natecostello/content_test
 on:
-    repository_dispatch:
-	types: [my-test]
+  repository_dispatch:
+   types: [my-test]
 
 jobs:
   myEvent:
