@@ -13,3 +13,16 @@ jobs:
         with:
           token: ${{ secrets.PAT_MY_TOKEN }}
           submodules: recursive
+        run: |
+          git config --global user.name 'Nate Costello'
+          git config --global user.email 'natecostello@@users.noreply.github.com'
+          git submodule update --remote
+          git add .
+          git commit -m 'automatic update of content'
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_MY_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git push origin master
+
+          # Need to run git submodule update --remote
+          # Need to run git add .
+          # Need to run git commit -m 'automatic update of content'
+          # Need to run git push origin master
