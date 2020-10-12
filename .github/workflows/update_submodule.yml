@@ -13,6 +13,7 @@ jobs:
         with:
           token: ${{ secrets.PAT_MY_TOKEN }}
           submodules: recursive
+      - name: update_and_commit 
         run: |
           git config --global user.name 'Nate Costello'
           git config --global user.email 'natecostello@@users.noreply.github.com'
